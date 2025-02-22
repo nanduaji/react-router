@@ -1,0 +1,47 @@
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .icon:hover {
+    color: #ff6b6b;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
