@@ -3,6 +3,7 @@ import styles from './About.module.css'
 import Carousel from 'react-bootstrap/Carousel';
 import { Card, Container, Row, Col, Spinner } from "react-bootstrap";
 import axios from 'axios';
+import { ClipLoader } from 'react-spinners';
 const About = () => {
   const [members, setMembers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -34,25 +35,23 @@ const About = () => {
     <div className="container py-5">
       <div className="row align-items-center text-center text-md-start">
         <div className="col-md-6">
-          <h2 className="fw-bold text-primary">Empowering Your Business</h2>
+          <h2 className="fw-bold text-primary">Driving Business Success Through Innovation.</h2>
           <p className="lead text-muted">
             We provide cutting-edge solutions to help you scale, innovate, and stay ahead of the competition.
           </p>
-          <button className="btn btn-primary mt-3">Learn More</button>
+          <button className="btn btn-primary mt-3">Discover More</button>
         </div>
         <div className="col-md-6">
           <img src="./aboutus.avif" alt="Business" className="img-fluid rounded shadow" />
         </div>
       </div>
       <div>
-        <h3 className={styles.aboutUsHeading}>Meet Our team</h3>
-        {/* // use default images here */}
-        {/* make an array of local images and map throgh it */}
+        <h3 className={styles.aboutUsHeading}>Our Leadership Team</h3>
         <Container className="py-5">
           <h2 className="text-center mb-4">Board Members</h2>
           {loading ? (
             <div className="text-center">
-              <Spinner animation="border" variant="primary" />
+              <ClipLoader color="#007bff" size={50} />
             </div>
           ) : (
             <Row className="justify-content-center">

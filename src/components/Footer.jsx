@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p className={styles.logo}>YourCompany</p>
+        <p className={styles.logo}>Our Company</p>
         <p className={styles.tagline}>Innovating the Future, One Step at a Time.</p>
 
         <div className={styles.socialIcons}>
@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
 
         <p className={styles.copyright}>
-          © {new Date().getFullYear()} YourCompany. All Rights Reserved.
+          © {new Date().getFullYear()} Our Company. All Rights Reserved.
         </p>
       </div>
     </footer>

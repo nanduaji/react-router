@@ -4,6 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import User from './components/User';
 import Footer from "./components/Footer";
+import PageNotFound from "./components/PageNotFound";
 function App() {
   return (
     <div>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/user" element={<User/>}/>
+          <Route path="/*" element={<PageNotFound/>}/>
           </Routes>
         </Router>
         <Footer />
