@@ -1,0 +1,7 @@
+.aboutUsHeading {
+    font-size: 2rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
