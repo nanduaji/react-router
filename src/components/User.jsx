@@ -15,6 +15,7 @@ import { faFacebook, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ClipLoader } from "react-spinners";
 import { Button } from "react-bootstrap";
+import { ToastContainer, toast } from 'react-toastify';
 
 library.add(faFacebook, faTwitter, faLinkedin);
 
@@ -58,7 +59,7 @@ export default function ProfileStatistics() {
             <MDBCard style={{ borderRadius: "15px", position: "relative" }}>
               <div className="position-absolute top-0 end-0 m-2 d-flex align-items-center">
                 <input
-                  type="number"
+                  type="text"
                   value={userId}
                   className="form-control me-2"
                   placeholder="User ID"
@@ -66,11 +67,22 @@ export default function ProfileStatistics() {
                   max="10"
                   style={{ width: "100px", textAlign: "center", fontSize: "14px" }}
                   onChange={(e) => {
-                    const value = parseInt(e.target.value, 10) || 1;
-                    setUserId(Math.max(1, Math.min(10, value)));
+                    const value = e.target.value;
+                    if (/^\d*$/.test(value)) {
+                      const numericValue = parseInt(value, 10);
+                      if (numericValue >= 1 && numericValue <= 10) {
+                        setUserId(numericValue);
+                      } else if (value === '') {
+                        setUserId('');
+                      }else {
+                        toast(<p style={{color:'red'}}>Minimum Value 1 and Maximum value 10</p>)
+                      }
+                    }
                   }}
                 />
+                
                 <Button size="sm" onClick={handleChangeUser}>Change User</Button>
+                <ToastContainer type="warning"/>
               </div>
 
               <MDBCardBody className="text-center mt-3">
@@ -97,7 +109,6 @@ export default function ProfileStatistics() {
                   Address: {user.address.suite}, {user.address.street}, {user.address.city}, {user.address.zipcode}
                 </MDBCardText>
 
-                {/* Social Icons */}
                 <div className="mb-4 pb-2">
                   <Button variant="outline-primary" className="me-1">
                     <FontAwesomeIcon icon={faFacebook} size="lg" />
