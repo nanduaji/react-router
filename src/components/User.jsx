@@ -99,13 +99,13 @@ export default function ProfileStatistics() {
 
                 {/* Social Icons */}
                 <div className="mb-4 pb-2">
-                  <Button variant="outline-secondary" className="me-1" disabled>
+                  <Button variant="outline-primary" className="me-1">
                     <FontAwesomeIcon icon={faFacebook} size="lg" />
                   </Button>
-                  <Button variant="outline-secondary" className="me-1" disabled>
+                  <Button variant="outline-primary" className="me-1">
                     <FontAwesomeIcon icon={faTwitter} size="lg" />
                   </Button>
-                  <Button variant="outline-secondary" disabled>
+                  <Button variant="outline-primary">
                     <FontAwesomeIcon icon={faLinkedin} size="lg" />
                   </Button>
                 </div>
